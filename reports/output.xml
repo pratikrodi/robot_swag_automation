@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-11-06T22:53:31.396128" rpa="false" schemaversion="5">
+<suite id="s1" name="Swag Advanced Test" source="D:\NewLearnings\qa_automation_project\tests\swag_advanced_test.robot">
+<test id="s1-t1" name="Valid Login Test" line="10">
+<kw name="Open Browser To Swag Labs" owner="swag_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:31.925940" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T22:53:31.924845" elapsed="3.657752"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T22:53:35.583157" elapsed="0.093429"/>
+</kw>
+<doc>Open browser and navigate to login page</doc>
+<status status="PASS" start="2025-11-06T22:53:31.922446" elapsed="3.754749"/>
+</kw>
+<kw name="Login With Credentials" owner="swag_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:35.682628" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:35.680787" elapsed="0.321790"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:36.003915" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:36.003200" elapsed="0.218524"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:36.222559" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:36.222152" elapsed="0.287085"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-11-06T22:53:35.678864" elapsed="0.830742"/>
+</kw>
+<kw name="Verify Successful Login" owner="swag_keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:36.537161" level="INFO">Current page contains element 'css:.inventory_list'.</msg>
+<arg>css:.inventory_list</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-06T22:53:36.511667" elapsed="0.025851"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:36.510872" elapsed="0.026922"/>
+</kw>
+<kw name="Close All Browser" owner="swag_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-06T22:53:36.540038" elapsed="2.527957"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:36.539160" elapsed="2.529259"/>
+</kw>
+<doc>Test login with valid credentials</doc>
+<status status="PASS" start="2025-11-06T22:53:31.919638" elapsed="7.149462"/>
+</test>
+<test id="s1-t2" name="Invalid Login Test" line="15">
+<kw name="Open Browser To Swag Labs" owner="swag_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:39.073088" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T22:53:39.072512" elapsed="4.091842"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T22:53:43.165647" elapsed="0.110539"/>
+</kw>
+<doc>Open browser and navigate to login page</doc>
+<status status="PASS" start="2025-11-06T22:53:39.071834" elapsed="4.204732"/>
+</kw>
+<kw name="Login With Credentials" owner="swag_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:43.279168" level="INFO">Typing text 'wrong_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:43.278359" elapsed="0.294627"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:43.573952" level="INFO">Typing text 'wrong_pass' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:43.573371" elapsed="0.216550"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:43.790753" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:43.790323" elapsed="0.218135"/>
+</kw>
+<arg>${INVALID_USER}</arg>
+<arg>${INVALID_PASS}</arg>
+<status status="PASS" start="2025-11-06T22:53:43.277461" elapsed="0.731659"/>
+</kw>
+<kw name="Verify Invalid Login Message" owner="swag_keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:44.047265" level="INFO">Current page contains element 'css:h3[data-test="error"]'.</msg>
+<arg>css:h3[data-test="error"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-06T22:53:44.011339" elapsed="0.036257"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:44.048967" level="INFO">Verifying element 'css:h3[data-test="error"]' contains exact text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>css:h3[data-test="error"]</arg>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-11-06T22:53:44.048171" elapsed="0.070141"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:44.010196" elapsed="0.108401"/>
+</kw>
+<kw name="Close All Browser" owner="swag_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-06T22:53:44.120070" elapsed="2.530713"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:44.119482" elapsed="2.531602"/>
+</kw>
+<doc>Test login with invalid credentials</doc>
+<status status="PASS" start="2025-11-06T22:53:39.070648" elapsed="7.580947"/>
+</test>
+<test id="s1-t3" name="Add To Cart Test" line="20">
+<kw name="Open Browser To Swag Labs" owner="swag_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:46.655677" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T22:53:46.655121" elapsed="6.900913"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T22:53:53.557044" elapsed="0.102905"/>
+</kw>
+<doc>Open browser and navigate to login page</doc>
+<status status="PASS" start="2025-11-06T22:53:46.654432" elapsed="7.005876"/>
+</kw>
+<kw name="Login With Credentials" owner="swag_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:53.662675" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:53.662123" elapsed="0.291981"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:53.955725" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:53.955032" elapsed="0.208144"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:54.163944" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:54.163552" elapsed="0.256808"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-11-06T22:53:53.661268" elapsed="0.759451"/>
+</kw>
+<kw name="Add Products To Cart" owner="swag_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:54.423677" level="INFO">Clicking button 'xpath://button[@data-test='add-to-cart-sauce-labs-backpack']'.</msg>
+<arg>xpath://button[@data-test='add-to-cart-sauce-labs-backpack']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:54.423013" elapsed="0.203958"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:54.627889" level="INFO">Clicking button 'xpath://button[@data-test='add-to-cart-sauce-labs-bike-light']'.</msg>
+<arg>xpath://button[@data-test='add-to-cart-sauce-labs-bike-light']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:54.627423" elapsed="0.171317"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:54.421882" elapsed="0.377192"/>
+</kw>
+<kw name="Go To Cart" owner="swag_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:54.800847" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<arg>class:shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:54.800486" elapsed="0.184675"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:54.799888" elapsed="0.185775"/>
+</kw>
+<kw name="Verify Cart Items" owner="swag_keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:55.040307" level="INFO">Current page contains element 'xpath://div[@class='cart_item']'.</msg>
+<arg>xpath://div[@class='cart_item']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-06T22:53:54.988271" elapsed="0.052373"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:55.064191" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath://div[@class='cart_item']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.041232" elapsed="0.023141"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.065236" elapsed="0.001112"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:54.986884" elapsed="0.079769"/>
+</kw>
+<kw name="Logout From Application" owner="swag_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:55.068760" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.068373" elapsed="0.191935"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:logout_sidebar_link</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.260716" elapsed="0.276009"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:55.537899" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.537557" elapsed="0.193014"/>
+</kw>
+<arg>1</arg>
+<arg>3</arg>
+<arg>Click Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.537133" elapsed="0.193657"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:55.758373" level="INFO">Current page contains element 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.731123" elapsed="0.027528"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:55.067631" elapsed="0.691309"/>
+</kw>
+<kw name="Close All Browser" owner="swag_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-06T22:53:55.760988" elapsed="2.563269"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:53:55.760011" elapsed="2.564630"/>
+</kw>
+<doc>Verify adding products to cart works correctly</doc>
+<status status="PASS" start="2025-11-06T22:53:46.653158" elapsed="11.671945"/>
+</test>
+<test id="s1-t4" name="Empty Cart Test" line="28">
+<kw name="Open Browser To Swag Labs" owner="swag_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:53:58.329081" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T22:53:58.328519" elapsed="6.375466"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T22:54:04.704449" elapsed="0.111490"/>
+</kw>
+<doc>Open browser and navigate to login page</doc>
+<status status="PASS" start="2025-11-06T22:53:58.327847" elapsed="6.488573"/>
+</kw>
+<kw name="Login With Credentials" owner="swag_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:04.821980" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:54:04.820824" elapsed="0.371626"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:05.193677" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:54:05.192953" elapsed="0.277887"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:05.472089" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:54:05.471391" elapsed="0.257523"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-11-06T22:54:04.818553" elapsed="0.910612"/>
+</kw>
+<kw name="Go To Cart" owner="swag_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:05.731280" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<arg>class:shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:54:05.730590" elapsed="0.211633"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:54:05.729984" elapsed="0.212563"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:05.966966" level="INFO">Current page does not contain element 'xpath://div[@class='cart_item']'.</msg>
+<arg>xpath://div[@class='cart_item']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-11-06T22:54:05.943681" elapsed="0.023560"/>
+</kw>
+<kw name="Logout From Application" owner="swag_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:05.968928" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:54:05.968602" elapsed="0.162956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:logout_sidebar_link</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T22:54:06.132173" elapsed="0.293221"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:06.426848" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T22:54:06.426424" elapsed="0.262007"/>
+</kw>
+<arg>1</arg>
+<arg>3</arg>
+<arg>Click Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-06T22:54:06.425890" elapsed="0.263330"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T22:54:06.725811" level="INFO">Current page contains element 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-06T22:54:06.689674" elapsed="0.036425"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:54:05.968094" elapsed="0.758272"/>
+</kw>
+<kw name="Close All Browser" owner="swag_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-06T22:54:06.728342" elapsed="2.670733"/>
+</kw>
+<status status="PASS" start="2025-11-06T22:54:06.727594" elapsed="2.671936"/>
+</kw>
+<doc>Verify empty cart shows no items</doc>
+<status status="PASS" start="2025-11-06T22:53:58.326582" elapsed="11.073618"/>
+</test>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-11-06T22:54:09.402963" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-06T22:54:09.402600" elapsed="0.000522"/>
+</kw>
+<doc>Advanced Robot Framework Project - SauceDemo</doc>
+<status status="PASS" start="2025-11-06T22:53:31.400355" elapsed="38.002902"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Swag Advanced Test" id="s1" pass="4" fail="0" skip="0">Swag Advanced Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
